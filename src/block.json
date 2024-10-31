@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "thenahidul/responsive-pros-cons-block",
+	"version": "1.0.0",
+	"title": "Responsive Pros and Cons",
+	"category": "layout",
+	"icon": "yes-alt",
+	"description": "Add responsive pros and cons lists to your page.",
+	"example": {},
+	"attributes": {
+		"blockWidgetId": {
+			"type": "string",
+			"default": ""
+		},
+		"items": {
+			"type": "object",
+			"default": {
+				"pros": [],
+				"cons": []
+			}
+		},
+		"settings": {
+			"type": "object",
+			"default": {
+				"design": "one",
+				"pros": {
+					"title": "Pros",
+					"styles": {}
+				},
+				"cons": {
+					"title": "Cons",
+					"styles": {}
+				}
+			}
+		},
+		"updatedAt": {
+			"type": "integer",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"textdomain": "responsive-pros-cons-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

@@ -1,0 +1,91 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+.responsive-pros-cons {
+	&__tab {
+		flex: 1;
+		justify-content: center;
+		border: 1px solid #ddd;
+
+		&.is-active {
+			background: var(--wp-components-color-accent, var(--wp-admin-theme-color,#3858e9));
+			color: var(--wp-components-color-accent-inverted, #fff);
+			border-color: var(--wp-components-color-accent, var(--wp-admin-theme-color,#3858e9));
+		}
+
+		&:first-child {
+			border-right: 0;
+			border-radius: 2px 0 0 2px;
+		}
+
+		&:last-child {
+			border-left: 0;
+			border-radius: 0 2px 2px 0;
+		}
+
+		&-panel {
+			padding: 16px;
+		}
+
+		&-content {
+			padding-top: 12px;
+		}
+	}
+
+	&__panel {
+		&-body {
+			.components-button {
+				display: flex;
+				flex-direction: row-reverse;
+				justify-content: flex-end;
+				padding-left: 12px;
+			}
+
+			&--settings {
+				border: 1px solid #ddd !important;
+				margin-bottom: 10px;
+				border-radius: 2px;
+
+				.components-button {
+					text-transform: capitalize;
+				}
+			}
+		}
+
+
+	}
+
+	&__sortable {
+		&-item {
+			margin-bottom: 10px;
+			border-top: none;
+
+			.responsive-pros-cons__panel-body {
+				border: 1px solid #ddd;
+				border-radius: 2px;
+			}
+		}
+
+		&-move {
+			cursor: move;
+			margin-left: 0;
+			margin-right: 5px;
+		}
+	}
+}
+
+.editor-styles-wrapper {
+	.responsive-pros-cons__list {
+		margin: 0;
+		list-style: none;
+
+		li {
+			svg {
+				margin-top: 4px;
+			}
+		}
+	}
+}
